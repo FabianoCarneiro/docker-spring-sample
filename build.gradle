@@ -39,17 +39,6 @@ dependencies {
     testCompile("junit:junit")
 }
 
-artifacts {
-  archives file: file('build/libs/gs-spring-boot-0.1.0.jar'), name: 'gs-spring-boot-0.1.0', type: 'jar'
-}
-
-addFilter('gs-spring-boot-0.1.0') {artifact, file ->
-  artifact.name == 'gs-spring-boot-0.1.0'
-}
-
-configurations {
-  resultArchives
-}
 uploadArchives {
     repositories {
        mavenDeployer {
@@ -59,9 +48,8 @@ uploadArchives {
              pom.version = version
              pom.artifactId = "gs-spring-boot"
              pom.groupId = "com.example"
+             pom.name ="gs-spring-boot"
        }
     }
 }
-artifacts{
-  resultArchives file: file('build/libs/gs-spring-boot-0.1.0.jar')
-}
+
