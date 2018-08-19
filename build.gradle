@@ -45,9 +45,12 @@ uploadArchives {
              repository(url: "http://localhost:8081/nexus/content/repositories/snapshots") {
              authentication(userName: "admin", password: "admin123")
 }
-             pom.version = "1.0-SNAPSHOT"
+             pom.version = version
              pom.artifactId = "gs-spring-boot"
              pom.groupId = "com.example"
        }
     }
+}
+artifacts{
+  resultArchives file: file('build/libs/gs-spring-boot-0.1.0.jar')
 }
