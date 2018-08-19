@@ -39,6 +39,14 @@ dependencies {
     testCompile("junit:junit")
 }
 
+artifacts {
+  archives file: file('build/libs/gs-spring-boot-0.1.0.jar'), name: 'gs-spring-boot-0.1.0', type: 'jar'
+}
+
+addFilter('gs-spring-boot-0.1.0') {artifact, file ->
+  artifact.name == 'gs-spring-boot-0.1.0'
+}
+
 configurations {
   resultArchives
 }
