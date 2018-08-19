@@ -39,6 +39,9 @@ dependencies {
     testCompile("junit:junit")
 }
 
+configurations {
+  resultArchives
+}
 uploadArchives {
     repositories {
        mavenDeployer {
