@@ -12,6 +12,7 @@ buildscript {
 
 plugins {
   id "org.sonarqube" version "2.6.1"
+  id 'maven-publish'
 }
 
 apply plugin: 'java'
@@ -44,7 +45,7 @@ uploadArchives {
              authentication(userName: "admin", password: "admin123")
 }
              pom.version = "1.0-SNAPSHOT"
-             pom.artifactId = "simple-project"
+             pom.artifactId = "itau-springboot"
              pom.groupId = "com.example"
        }
     }
