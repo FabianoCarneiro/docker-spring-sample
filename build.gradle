@@ -46,7 +46,7 @@ uploadArchives {
              authentication(userName: "admin", password: "admin123")
 }
              pom.version = "1.0-SNAPSHOT"
-             pom.artifactId = "gs-spring-boot-0.1.0"
+             pom.artifactId = "gs-spring-boot"
              pom.groupId = "com.example"
        }
     }
