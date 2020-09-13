@@ -29,7 +29,12 @@ bootJar {
 
 group = 'snapshots'
 version = '0.1.0'
-artifactId = 'gs-spring-boot'
+
+pom.version = version
+pom.artifactId = "gs-spring-boot"
+pom.groupId = "com.example"
+pom.name ="gs-spring-boot"
+             
 sourceCompatibility = '1.8'
 apply plugin: 'maven-publish'
 publishing {
