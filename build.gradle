@@ -27,6 +27,7 @@ bootJar {
     version =  '0.1.0'
 }
 
+group = 'snapshots'
 sourceCompatibility = '1.8'
 apply plugin: 'maven-publish'
 publishing {
@@ -40,7 +41,7 @@ publishing {
     repositories {
         maven {
             name 'nexus'
-            url "http://localhost:8082/nexus/content/repositories/snapshots"
+            url "http://localhost:8082/nexus/content/repositories/"
             credentials {
                 username project.repoUser
                 password project.repoPassword
