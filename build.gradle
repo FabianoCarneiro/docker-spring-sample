@@ -50,6 +50,9 @@ publishing {
     }
 }
 
+repositories {
+     mavenCentral()
+ }
 
 
 dependencies {
