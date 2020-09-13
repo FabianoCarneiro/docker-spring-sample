@@ -42,7 +42,7 @@ publishing {
     repositories {
         maven {
             name 'nexus'
-            url "http://localhost:8082/nexus/content/repositories/"
+            url "http://localhost:8082/nexus/content/repositories/maven-releases/"
             credentials {
                 username project.repoUser
                 password project.repoPassword
