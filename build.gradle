@@ -2,7 +2,7 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-          url "http://localhost:8081/nexus/content/groups/public"
+          url "http://localhost:8082/nexus/content/groups/public"
         }
     }
     dependencies {
@@ -42,7 +42,7 @@ dependencies {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://localhost:8081/nexus/content/repositories/snapshots") {
+             repository(url: "http://localhost:8082/nexus/content/repositories/snapshots") {
              authentication(userName: "admin", password: "admin123")
 }
              pom.version = version
