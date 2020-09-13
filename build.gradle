@@ -28,7 +28,7 @@ bootJar {
 }
 
 group = 'ro.trc.common'
-sourceCompatibility = '1.8’
+sourceCompatibility = '1.8
 apply plugin: 'maven-publish'
 publishing {
     publications {
