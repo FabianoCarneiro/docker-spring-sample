@@ -33,7 +33,7 @@ apply plugin: 'maven-publish'
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact("build/libs/gs-spring-boot-$version"+".jar") {
+            artifact("build/libs/gs-spring-boot-0.1.0.jar") {
                 extension 'jar'
             }
         }
