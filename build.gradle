@@ -36,13 +36,14 @@ publishing {
         maven(MavenPublication) {
             artifact("build/libs/gs-spring-boot-$version"+".jar") {
                 extension 'jar'
+                name 'gs-spring-boot'
             }
         }
     }
     repositories {
         maven {
             name 'nexus'
-            url "http://localhost:8082/nexus/content/repositories/maven-releases/"
+            url "http://localhost:8082/nexus/content/repositories/"
             credentials {
                 username project.repoUser
                 password project.repoPassword
