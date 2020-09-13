@@ -42,8 +42,10 @@ publishing {
         maven {
             name 'nexus'
             url "http://localhost:8082/nexus/content/repositories/snapshots"
-            authentication(userName: "admin", password: "admin123")
-            }
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }}
     }
 }
 
