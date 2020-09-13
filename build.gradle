@@ -29,12 +29,6 @@ bootJar {
 
 group = 'snapshots'
 version = '0.1.0'
-
-pom.version = version
-pom.artifactId = "gs-spring-boot"
-pom.groupId = "com.example"
-pom.name ="gs-spring-boot"
-             
 sourceCompatibility = '1.8'
 apply plugin: 'maven-publish'
 publishing {
@@ -58,33 +52,9 @@ publishing {
 
 
 
-
-
-
-
-repositories {
-    mavenCentral()
-}
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
 }
 
-uploadArchives {
-    repositories {
-       mavenDeployer {
-             repository(url: "http://localhost:8082/nexus/content/repositories/snapshots") {
-             authentication(userName: "admin", password: "admin123")
-}
-             pom.version = version
-             pom.artifactId = "gs-spring-boot"
-             pom.groupId = "com.example"
-             pom.name ="gs-spring-boot"
-       }
-    }
-}
 
