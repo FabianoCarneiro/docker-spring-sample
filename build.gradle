@@ -27,6 +27,32 @@ bootJar {
     version =  '0.1.0'
 }
 
+group = 'ro.trc.common'
+sourceCompatibility = '1.8’
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact("build/libs/gs-spring-boot-$version"+".jar") {
+                extension 'jar'
+            }
+        }
+    }
+    repositories {
+        maven {
+            name 'nexus'
+            url "http://localhost:8082/nexus/content/repositories/snapshots"
+            authentication(userName: "admin", password: "admin123")
+            }
+    }
+}
+
+
+
+
+
+
+
 repositories {
     mavenCentral()
 }
